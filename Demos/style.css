@@ -1,0 +1,59 @@
+/* @group global */
+
+body {
+	font-family: Helvetica, arial;
+	background: #fff;
+}
+
+a#avatar {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+a#avatar img {
+	border: none;
+}
+
+h1 {
+	color: #0094d5;
+}
+
+h2 {
+	color: #43aa38;
+}
+
+a {
+	color: #0094d5;
+}
+
+a:visited, a:hover {
+	color: #00577e;
+}
+
+div#demo {
+	float: left;
+}
+
+div#sprite {
+	float: left;
+}
+
+div#sprite img {
+	height: 50px;
+}
+
+p#links {
+	clear: both;
+}
+
+/* @end */
+
+#animation {
+	height: 160px;
+	width: 80px;
+	background-image: url(animation.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
