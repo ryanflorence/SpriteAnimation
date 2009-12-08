@@ -37,14 +37,20 @@ div#demo {
 
 div#sprite {
 	float: left;
+	margin-left: 50px;
 }
 
 div#sprite img {
-	height: 50px;
+	max-height: 50px;
+	max-width: 400px;
 }
 
 p#links {
 	clear: both;
+}
+
+div#demo {
+	position: relative;
 }
 
 /* @end */
@@ -64,7 +70,7 @@ p#links {
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	position: absolute;
-	top: 150px;
-	left: 20px;
+	top: 140px;
+	left: 8px;
 }
 
