@@ -57,3 +57,14 @@ p#links {
 	background-position: 0 0;
 }
 
+#spinner {
+	width: 64px;
+	height: 64px;
+	background-image: url(spinner.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	position: absolute;
+	top: 150px;
+	left: 20px;
+}
+

@@ -4,14 +4,18 @@ window.addEvent('domready',function(){
 	  frameWidth: 80,
 	  frames: 4,
 	  frameRate: 120
-	});
+	}).stopLoop();
 
 	$('start_stop').addEvent('click',function(){
 		if(this.get('text') == 'Stop') {
 			animation.stopLoop();
+			spinner.startLoop();
+			spinner.element.fade('in');
 			this.set('text','Start');
 		} else {
 			animation.startLoop();
+			spinner.stopLoop();
+			spinner.element.fade('out');
 			this.set('text','Stop');
 		}
 	});
@@ -22,6 +26,12 @@ window.addEvent('domready',function(){
 
 	$('reset').addEvent('click',function(){
 	  animation.reset();
+	});
+	
+	var spinner = new SpriteAnimation('spinner',{
+	  frameWidth: 64,
+	  frames: 12,
+	  frameRate: 50
 	});
 	  
 });
