@@ -1,3 +1,24 @@
+/*
+---
+
+script: SpriteAnimation.js
+
+description: Cycles the x value of the background-position of an element to create sprite animations.  Helpful for creating javascript game animations or ajax loadings spinners.
+
+license: MIT-style license.
+
+authors: Ryan Florence <http://ryanflorence.com>
+
+docs: http://moodocs.net/rpflo/mootools-rpflo/SpriteAnimation
+
+requires:
+- core:1.2.4
+
+provides: [SpriteAnimation]
+
+...
+*/
+
 var SpriteAnimation = new Class({
   
 	Implements: [Options, Events, Loop],
