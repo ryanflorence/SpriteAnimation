@@ -12,7 +12,7 @@ authors: Ryan Florence <http://ryanflorence.com>
 docs: http://moodocs.net/rpflo/mootools-rpflo/SpriteAnimation
 
 requires:
-- core:1.2.4
+ core/1.2.4: '*'
 
 provides: [SpriteAnimation]
 
@@ -34,7 +34,7 @@ var SpriteAnimation = new Class({
  
 	initialize: function(element,options){
 		this.setOptions(options);
-		this.setLoop(this.step, 100);
+		this.setLoop(this.step, this.options.frameRate);
 		this.element = document.id(element);
 		this.startLoop();
 	},
