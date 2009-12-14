@@ -5,5 +5,5 @@
 
 ### Notes
 
-It should be pretty straightforward to extend `SpriteAnimation` to accommodate cycling the y value of the background position instead of just the x value, or both at the same time.  Common use case is having multiple sprite animations in a single image file that each instance can use, or even alter the state of a single instance.
+It should be pretty straightforward to extend `SpriteAnimation` to accommodate cycling the y value of the background position instead of just the x value, or both at the same time.  Common use case is having multiple sprite animations in a single image file that each instance can use, or even alter the state of a single instance.  Just overwrite the `computeX` and `computeY` methods with your calculation.
 
