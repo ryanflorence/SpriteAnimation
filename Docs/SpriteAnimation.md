@@ -16,9 +16,13 @@ Class: SpriteAnimation {#SpriteAnimation}
     var animation = new SpriteAnimation('animation',{
       frameWidth: 80,
       frames: 4,
-      frameRate: 120
+      frameRate: 120,
+      defaultPosition: {x: 0, y: -150}
     });
 
+### Notes:
+
+<big>You can extend the class and overwrite the `computeX` or `computeY` methods to alter the animation behavior--i.e. animating columns instead of rows.</big>
 
 SpriteAnimation Method: constructor {#SpriteAnimation:constructor}
 -------------------------------------------------------------------
@@ -38,12 +42,13 @@ SpriteAnimation Method: constructor {#SpriteAnimation:constructor}
 * frameWidth - (*integer*: defaults to 75) The width of each frame in the sprite animation.
 * frames - (*integer*: defaults to 10) The number of frames in your sprite image.
 * frameRate - (*integer*: defaults to 100) The number of milliseconds between steps.
+* defaultPosition = (*obj*) An object containing x and y values for the default background-position of your element.  Useful for having multiple animations in a single file.
 
 
 SpriteAnimation Method: reset {#SpriteAnimation:reset}
 -------------------------------------------------------
 
-<big>Sets the background position to `0,0`</big>
+<big>Resets the animation to the first frame</big>
 
 ### Syntax:
 

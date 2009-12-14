@@ -30,13 +30,15 @@ var SpriteAnimation = new Class({
 				frameWidth: 75,
 				frames: 10,
 				frameRate: 100,
-				yPosition: 0
+				defaultPosition: {x: 0, y :0}
 			},
  
 	initialize: function(element,options){
 		this.setOptions(options);
 		this.setLoop(this.step, this.options.frameRate);
 		this.element = document.id(element);
+		var pos = this.options.defaultPosition;
+		this.element.setStyle('background-position', pos.x + 'px ' + pos.y + 'px');
 		this.startLoop();
 	},
  
@@ -49,12 +51,12 @@ var SpriteAnimation = new Class({
 	},
 	
 	computeX: function(){
-		this.loopCount = (this.loopCount == (this.options.frames)) ? 0 : this.loopCount
+		this.loopCount = (this.loopCount == (this.options.frames)) ? this.options.defaultPosition.x : this.loopCount
 		return -this.loopCount * this.options.frameWidth;
 	},
 	
 	computeY: function(){
-		return this.options.yPosition;
+		return this.options.defaultPosition.y;
 	},
 	
 	reset: function(){

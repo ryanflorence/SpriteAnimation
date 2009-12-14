@@ -3,7 +3,8 @@ window.addEvent('domready',function(){
 	var animation = new SpriteAnimation('animation',{
 	  frameWidth: 80,
 	  frames: 4,
-	  frameRate: 120
+	  frameRate: 120,
+		defaultPosition: {x: 0, y: 0}
 	}).stopLoop();
 
 	$('start_stop').addEvent('click',function(){
