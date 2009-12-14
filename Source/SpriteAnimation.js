@@ -29,7 +29,8 @@ var SpriteAnimation = new Class({
 				*/
 				frameWidth: 75,
 				frames: 10,
-				frameRate: 100
+				frameRate: 100,
+				yPosition: 0
 			},
  
 	initialize: function(element,options){
@@ -40,11 +41,20 @@ var SpriteAnimation = new Class({
 	},
  
 	step: function(){
-		this.loopCount = (this.loopCount == (this.options.frames)) ? 0 : this.loopCount
-		var style = -this.loopCount * this.options.frameWidth;
-		this.element.setStyle('background-position',style+'px 0px');
-		this.fireEvent('onStep',this.count);
+		var x = this.computeX();
+		var y = this.computeY();
+		this.element.setStyle('background-position', x+'px '+ y+'px');
+		this.fireEvent('onStep', this.count);
 		return this;
+	},
+	
+	computeX: function(){
+		this.loopCount = (this.loopCount == (this.options.frames)) ? 0 : this.loopCount
+		return -this.loopCount * this.options.frameWidth;
+	},
+	
+	computeY: function(){
+		return this.options.yPosition;
 	},
 	
 	reset: function(){
